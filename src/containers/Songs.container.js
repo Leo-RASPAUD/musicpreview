@@ -8,6 +8,7 @@ import playerActions from 'actions/Player.actions';
 const mapStateToProps = state => ({
     songs: state.artistDetails.songs,
     isSongPlaying: state.artistDetails.isSongPlaying,
+    isFormModified: state.searchArtist.isFormModified,
 });
 
 const mapDispatchToProps = {

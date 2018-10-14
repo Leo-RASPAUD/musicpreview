@@ -18,7 +18,7 @@ const handleChangeArtistTimeout = ({ artist, handleChangeArtist, searchArtist })
 
     timer = setTimeout(() => {
         searchArtist({ artist });
-    }, 250);
+    }, 500);
 };
 
 const SearchArtist = props => {

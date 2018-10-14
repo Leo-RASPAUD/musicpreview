@@ -2,6 +2,7 @@ import statesConstants from 'constants/states.constants';
 
 const initialState = {
     loading: false,
+    isFormModified: false,
     artist: { artistName: '' },
     artists: [],
 };
@@ -23,6 +24,7 @@ const searchArtistReducer = (state = initialState, action) => {
             return {
                 ...state,
                 artists: action.artists,
+                isFormModified: true,
                 loading: false,
             };
         case statesConstants.SEARCH_ARTIST_HANDLE_CHANGE:

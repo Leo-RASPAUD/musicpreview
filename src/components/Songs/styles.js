@@ -4,9 +4,6 @@ const styles = theme => ({
     root: {
         ...cssConstants.overflow.auto,
     },
-    wrapper: {
-        ...cssConstants.display.flex,
-    },
     listItem: {
         ...cssConstants.display.flex,
         ...cssConstants.alignItems.center,
@@ -18,6 +15,7 @@ const styles = theme => ({
     buttons: {
         ...cssConstants.display.flex,
         ...cssConstants.alignItems.center,
+        ...cssConstants.justifyContent.flexEnd,
     },
     details: {
         ...cssConstants.display.flex,

@@ -21,8 +21,8 @@ const mapDispatchToProps = {
 )
 class DesktopPlayerContainer extends React.PureComponent {
     render() {
-        const { selectedAlbum } = this.props;
-        return !selectedAlbum ? null : <DesktopPlayer {...this.props} />;
+        const { selectedAlbum, songToPlay } = this.props;
+        return selectedAlbum || songToPlay ? <DesktopPlayer {...this.props} /> : null;
     }
 }
 

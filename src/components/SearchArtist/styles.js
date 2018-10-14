@@ -2,7 +2,6 @@ import cssConstants from 'constants/css.constants';
 
 const styles = theme => ({
     autoCompleteContainer: {
-        flexGrow: 1,
         ...cssConstants.position.relative,
     },
     autoCompletePaper: {
