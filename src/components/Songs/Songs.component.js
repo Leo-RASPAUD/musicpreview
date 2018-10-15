@@ -28,23 +28,38 @@ const Songs = props => {
                         key={song.trackId}
                     >
                         <Grid container spacing={0}>
-                            <Grid item className={classes.listItem} lg={8} md={12}>
-                                <img
-                                    src={song.artworkUrl60}
-                                    alt="Artwork"
-                                    className={classes.marginArtwork}
-                                />
-                                <div className={classes.details}>
-                                    <Typography variant="subtitle1">{song.trackName}</Typography>
-                                    <Typography className={classes.opacity075}>
-                                        {song.artistName}
-                                    </Typography>
-                                    <Typography className={classes.opacity075}>
-                                        {song.collectionName}
-                                    </Typography>
-                                </div>
+                            <Grid item className={classes.listItem} lg={8} md={12} sm={12}>
+                                <Grid container spacing={0} style={{ justifyContent: 'center' }}>
+                                    <Grid item className={classes.listItem} md={4} sm={12}>
+                                        <img
+                                            src={song.artworkUrl60}
+                                            alt="Artwork"
+                                            className={classes.marginArtwork}
+                                        />
+                                    </Grid>
+                                    <Grid item className={classes.listItem} md={12} sm={12}>
+                                        <div className={classes.details}>
+                                            <Typography variant="subtitle1">
+                                                {song.trackName}
+                                            </Typography>
+                                            <Typography className={classes.opacity075}>
+                                                {song.artistName}
+                                            </Typography>
+                                            <Typography className={classes.opacity075}>
+                                                {song.collectionName}
+                                            </Typography>
+                                        </div>
+                                    </Grid>
+                                </Grid>
                             </Grid>
-                            <Grid item className={classes.buttons} lg={4} md={12}>
+                            <Grid
+                                item
+                                className={classes.buttons}
+                                lg={4}
+                                md={12}
+                                sm={12}
+                                style={{ justifyContent: 'center' }}
+                            >
                                 {isSongPlaying &&
                                     song.isSongBeingPlayed && (
                                         <div className="lds-bar-chart">

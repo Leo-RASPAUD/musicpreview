@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
+import { MusicNote } from '@material-ui/icons';
 import ReactAudioPlayer from 'react-audio-player';
 import styles from './styles';
 
@@ -8,6 +10,12 @@ const DesktopPlayer = props => {
     const { playSong, songToPlay, pauseSong, classes } = props;
     return (
         <div className={classes.root}>
+            {songToPlay && (
+                <div className={classes.icon}>
+                    <MusicNote />
+                    <Typography variant="h6">{songToPlay.trackName}</Typography>
+                </div>
+            )}
             <ReactAudioPlayer
                 src={songToPlay ? songToPlay.previewUrl : null}
                 controls

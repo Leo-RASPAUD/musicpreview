@@ -10,12 +10,13 @@ const styles = theme => ({
     },
     listItems: {
         ...cssConstants.display.flex,
-        ...cssConstants.justifyContent.spaceBetween,
+        ...cssConstants.justifyContent.center,
     },
     buttons: {
         ...cssConstants.display.flex,
         ...cssConstants.alignItems.center,
         ...cssConstants.justifyContent.flexEnd,
+        width: '100%',
     },
     details: {
         ...cssConstants.display.flex,
