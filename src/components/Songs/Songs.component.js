@@ -29,7 +29,7 @@ const Songs = props => {
                     >
                         <Grid container spacing={0}>
                             <Grid item className={classes.listItem} lg={8} md={12} sm={12}>
-                                <Grid container spacing={0} style={{ justifyContent: 'center' }}>
+                                <Grid container spacing={0}>
                                     <Grid item className={classes.listItem} md={4} sm={12}>
                                         <img
                                             src={song.artworkUrl60}
@@ -52,14 +52,7 @@ const Songs = props => {
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid
-                                item
-                                className={classes.buttons}
-                                lg={4}
-                                md={12}
-                                sm={12}
-                                style={{ justifyContent: 'center' }}
-                            >
+                            <Grid item className={classes.buttons} lg={4} md={12} sm={12}>
                                 {isSongPlaying &&
                                     song.isSongBeingPlayed && (
                                         <div className="lds-bar-chart">

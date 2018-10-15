@@ -18,7 +18,7 @@ const getAlbumDetails = ({ song }) => async dispatch => {
         const result = await itunesService.searchSongsById({ id: song.collectionId });
         dispatch(
             getAlbumSongsSuccessAction({
-                results: result.data.results,
+                results: result.results,
                 selectedSongTrackId: song.trackId,
             }),
         );

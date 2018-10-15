@@ -30,7 +30,7 @@ const searchArtist = ({ artist }) => async dispatch => {
     dispatch(searchArtistLoadingAction());
     try {
         const result = await itunesService.searchArtist({ artist });
-        dispatch(searchArtistSuccessAction({ artists: result.data.results }));
+        dispatch(searchArtistSuccessAction({ artists: result.results }));
     } catch (error) {
         dispatch(searchArtistFailureAction({ error: 'Could not get the artist list' }));
     }
@@ -40,7 +40,7 @@ const getArtistSongs = ({ id }) => async dispatch => {
     dispatch(getArtistSongsLoadingAction());
     try {
         const result = await itunesService.searchSongsById({ id });
-        dispatch(getArtistSongsSuccessAction({ songs: result.data.results }));
+        dispatch(getArtistSongsSuccessAction({ songs: result.results }));
     } catch (error) {
         dispatch(
             getArtistSongsFailureAction({ error: 'Could not get the songs, try again later' }),
