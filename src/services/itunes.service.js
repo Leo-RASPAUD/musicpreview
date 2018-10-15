@@ -15,7 +15,6 @@ const searchSongsById = async ({ id }) => {
         throw new Error(); // Msg in action
     }
     const json = await response.json();
-    console.log(json);
     return json;
 };
 
